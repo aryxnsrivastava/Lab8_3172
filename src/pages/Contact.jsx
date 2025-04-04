@@ -56,7 +56,7 @@ function Contact(){
     }
 
     try{
-      const response = await fetch("/api/messages",{
+      const response = await fetch("https://mywebsite-op4x.onrender.com/api/messages",{
         method: "POST",
         headers:{
           "Content-Type": "application/json",
