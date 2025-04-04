@@ -6,7 +6,7 @@ function Messages(){
   useEffect(() =>{
     const fetchMessages = async () =>{
       try{
-        const response = await fetch("/api/messages");
+        const response = await fetch("https://mywebsite-op4x.onrender.com/api/messages");
         const data = await response.json();
         setMessages(data);
       } 
