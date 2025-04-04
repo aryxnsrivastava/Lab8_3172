@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const app = express();
 const PORT = 3001;
+const cors = require("cors");
 
 const messagesFile = path.join(__dirname, "messages.json");
 
