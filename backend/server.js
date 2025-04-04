@@ -6,6 +6,10 @@ const PORT = 3001;
 
 const messagesFile = path.join(__dirname, "messages.json");
 
+app.use(cors({
+    origin: 'https://aryxnsrivastava10.netlify.app'
+  }));
+  
 app.use(express.json());
 
 
