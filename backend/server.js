@@ -6,10 +6,20 @@ const PORT = 3001;
 
 const messagesFile = path.join(__dirname, "messages.json");
 
+
+const allowedOrigins = ['https://aryxnsrivastava10.netlify.app'];
+
 app.use(cors({
-    origin: 'https://aryxnsrivastava10.netlify.app'
-  }));
-  
+  origin: function (origin, callback) {
+    if(!origin || allowedOrigins.includes(origin)){
+      callback(null, true);
+    } 
+    else{
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
+
 app.use(express.json());
 
 
